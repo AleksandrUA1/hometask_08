@@ -14,7 +14,10 @@ body {
     margin-right: auto;
 }
 .top-menu {
-    width: 447px; /* как то по другому выровнять этот блок по центру я не придумал. Пришлось ограничить его ширину */
+    width: 447px; /* как то по другому выровнять этот блок по центру, не ограничивая его по ширине, я не додумался.
+    В случаи если название какогото из пунктов меню станет длиннее, последний пункт вывалится во вторую строку. 
+    А если вместо 447рх сделать блок шире (типа с запасом, 450 - 500), тогда содержимое блока уже не будет расположено по центру.
+    От шо делать?*/
     margin-left: auto;
     margin-right: auto;
     padding: 17px 0 16px 0;
@@ -85,6 +88,11 @@ body {
     border-width: 2px;
     border-radius: 40px;
 }
+.call-button:hover {
+    background-color: #e788a3;
+    color: #fff;
+    border: none;
+}
 .clearfix {
     clear: both;
 }
@@ -118,11 +126,11 @@ body {
 .a-item:hover {
     color: #f13c6e;
 }
-.bottom-block {
+.hiden-block {
     background-color: #f13c6e;
 }
 .block4 {
-    background-image: url(images/Rectangle\ 2.jpg);
+    background-image: url(images/Rectangle2.jpg); /*Почему сиреневые скобки? Почему при маштабировании страницы background-image сьезжает вправо?*/
     width: 1920px;
     height: 604px;
     margin-left: auto;
@@ -137,14 +145,14 @@ body {
     font-weight: 700;
     line-height: 56px;
     margin-bottom: 50px;
-    margin-left: 0;
-    width: 310px;
+    margin-left: 0;/*Стоит ли этот маржин тут использовать?*/
+    max-width: 320px;
 }
 .main-content {
     font-size: 14px;
     line-height: 20px;
-    width: 310px;
-    margin-left: 0;
+    max-width: 320px;
+    margin-left: 0;/*Стоит ли этот маржин тут использовать?*/
     margin-bottom: 50px;
 }
 .more-info {
@@ -159,7 +167,146 @@ body {
     letter-spacing: 0.05em;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    text-transform: capitalize;/*есть ли смысл это тут использовать? Типа чтобы наверняка у любой кнопки первая буква была заглавной*/
+    color: #fff;
+    cursor: pointer;
+    margin-left: 0;/*Стоит ли этот маржин тут использовать?*/
+}
+.more-info:hover {
+    background-color: #e788a3;
+    border: 2px solid #e788a3;
+}
+.block5 {
+    padding: 80px 0 81px 0;
+    background-color: #efefef;
+}
+.cards-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+.cards-style {
+    display: inline-block;
+    vertical-align: top;
+    margin: 38px 30px 0 0;
+    height: 363px;
+    width: 255px;
+    padding: 25px 30px;
+    background-color: #fff;/*нужен ли тут белый цвет, если он и так по умолчанию белый?*/
+    border: 2px solid #fff;/*добавил бордер чтобы содержимое карточки не прыгало при hover*/
+}
+.cards-style:last-child {
+    margin-right: 0;
+}
+.cards-style:hover {
+    border: 2px solid #e788a3;
+    /*cursor: pointer;*//*убрал курсор. Кажется будет лушче если курсор будет появлятся только при наведении на кнопку купитть*/
+}
+.cards-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    height: 166px;
+    margin-bottom: 20px;
+}
+.card-content {
+    line-height: 19px;
+    color: #333333;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.card-price {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: 0,05em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cards-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F13C6E;
+    min-width: 130px;
+    min-height: 35px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.cards-button:hover {
+    background-color: #e788a3;
+}
+.info-cards {
+    display: inline-block;
+    vertical-align: top;
+    width: 540px;
+    height: 230px;
+    margin: 100px 30px 0 0;
+    padding: 35px 45px 35px 40px;
+    background-color: #F13C6E;
+    color: #fff;
+}
+.info-cards:last-child {
+    margin-right: 0;
+}
+.info-left-side {
+    float: left;
+}
+.info-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-left: 0;/*не знаю надо ли оно*/
+    margin-bottom: 25px;
+    max-width: 250px;
+}
+.info-content {
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 231px;
+}
+.info.mail {
+    color: #C4C4C4;
+    width: 225px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin-top: 25px;
+    padding-left: 25px;
+    border-style: none;
+}
+.info.mail:focus {
+    color: #000;
+}
+.info-image {
+    float: right;
+    margin-top: 15px;
+}
+.info-button {
+    margin: 25px 0 0 0;
+    width: 170px;
+    height: 35px;
+    padding: 9px 28px 9px 29px;
+    background-color: #F13C6E;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.02em;
     color: #fff;
     cursor: pointer;
 }
-
+.info-button:hover {
+    background-color: #e788a3;
+    border: 2px solid #e788a3;
+}
