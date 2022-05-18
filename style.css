@@ -253,6 +253,7 @@ body {
     padding: 35px 45px 35px 40px;
     background-color: #F13C6E;
     color: #fff;
+    margin-bottom: 100px;
 }
 .info-cards:last-child {
     margin-right: 0;
@@ -284,7 +285,7 @@ body {
     border-style: none;
 }
 .info.mail:focus {
-    color: #000;
+    color: #000;/*как убрать чорную рамку у поля емеил?*/
 }
 .info-image {
     float: right;
@@ -309,4 +310,24 @@ body {
 .info-button:hover {
     background-color: #e788a3;
     border: 2px solid #e788a3;
+}
+.partners {
+    display: inline-block;
+    vertical-align: top;
+    height: 120px;
+    width: 277.5px;
+    background-color: #fff;
+    border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;;
+}
+.partner-logo {
+    display: block;/*это свойство использую для того чтобы выровнять содержимое по центру. Но появляется косяк. У меня содержимое это ссылка, при наведении на которую срабатывает курсор-поинтер. Учитывая то что содержимое является блочным елементом, поинтер срабатывает по всей ширине родителя. Как это исправить?*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px; 
+    max-height: 50px;
+    max-width: 180px;/*максимальное допустимое разрешение 180/50, на случай если будет загружен логотип размером больше родителя*/
+}
+.mar-bot-80 {
+    margin-bottom: 80px;
 }
