@@ -31,7 +31,7 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 17px;
 }
 .top-item:last-child {
     margin-right: 0;
@@ -70,6 +70,8 @@ body {
     margin: 30px 40px 31px 0;
     line-height: 18.75px;
     font-size: 16px;
+    text-decoration: none;
+    color: #000;
 }
 .call-button {
     display: inline-block;
@@ -154,20 +156,20 @@ body {
     margin-bottom: 50px;
 }
 .more-info {
-    min-width: 170px;
-    min-height: 40px;
-    padding: 0 24px 0 24px;
+    display: inline-block;
+    vertical-align: top;    
+    min-width: 170px;/*на случай если изменится размер названия кнопки*/
+    min-height: 40px;/*на случай если изменится размер названия кнопки*/
+    padding: 12px 24px 13px 24px;
     border: 2px solid #fff;
     background-color: transparent;
     border-radius: 40px;
+    text-decoration: none;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-transform: capitalize;/*есть ли смысл это тут использовать? Типа чтобы наверняка у любой кнопки первая буква была заглавной*/
+    text-align: center;
     color: #fff;
-    cursor: pointer;
     margin-left: 0;/*Стоит ли этот маржин тут использовать?*/
 }
 .more-info:hover {
@@ -175,17 +177,16 @@ body {
     border: 2px solid #e788a3;
 }
 .block5 {
-    padding: 80px 0 81px 0;
+    padding: 80px 0 80px 0;
     background-color: #efefef;
 }
 .cards-name {
     font-weight: 700;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 29px;
 }
 .cards-style {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     margin: 38px 30px 0 0;
     height: 363px;
     width: 255px;
@@ -193,12 +194,12 @@ body {
     background-color: #fff;/*нужен ли тут белый цвет, если он и так по умолчанию белый?*/
     border: 2px solid #fff;/*добавил бордер чтобы содержимое карточки не прыгало при hover*/
 }
-.cards-style:last-child {
+.cards-style:nth-child(4n) {
     margin-right: 0;
 }
 .cards-style:hover {
     border: 2px solid #e788a3;
-    /*cursor: pointer;*//*убрал курсор. Кажется будет лушче если курсор будет появлятся только при наведении на кнопку купитть*/
+    /*cursor: pointer;*//*убрал курсор. Кажется будет лушче если курсор будет появлятся только при наведении на кнопку - купитть*/
 }
 .cards-image {
     display: block;
@@ -224,37 +225,41 @@ body {
     margin-bottom: 20px;
 }
 .cards-button {
-    display: block;
+    display: block;/*Думал думал, и никак не придумал. А как сделать так, чтобы в случаи если текста в кнопке станет больше, размер кнопки увеличился вместе с текстом (сохраняя падинги), и при этом кнопка остается выровняной по центру родителя?*/
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;  
     background-color: #F13C6E;
-    min-width: 130px;
-    min-height: 35px;
     border-radius: 30px;
     border: none;
+    width: 130px;
+    height: 35px;
+    padding: 9px 0 9px 0;/*оставил падинги слева и справа 0, на случай если изменится размер текста в кнопке*/
+    text-decoration: none;
     color: #fff;
     text-align: center;
     line-height: 16px;
     letter-spacing: 0.05em;
-    text-transform: capitalize;
-    cursor: pointer;
 }
 .cards-button:hover {
     background-color: #e788a3;
 }
 .info-cards {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 540px;
-    height: 230px;
-    margin: 100px 30px 0 0;
+    height: 212px;
+    margin: 100px 30px 30px 0;
     padding: 35px 45px 35px 40px;
     background-color: #F13C6E;
     color: #fff;
-    margin-bottom: 100px;
 }
-.info-cards:last-child {
-    margin-right: 0;
+.info-cards:nth-child(n+3) {
+    margin: 0 30px 30px 0;/*у всех начиная с 3го справа и снизу отступ 30рх*/
+}
+.info-cards:nth-child(2n) {
+    margin-right: 0;/*у каждого второго отступ справа 0*/
+}
+.info-cards:nth-last-of-type(2) {
+    margin-bottom: 100px;/*у предпоследнего (последний клиарфикс) отступ снизу 100рх*/
 }
 .info-left-side {
     float: left;
@@ -262,7 +267,7 @@ body {
 .info-name {
     font-size: 18px;
     font-weight: 700;
-    line-height: 21px;
+    line-height: 19px;
     margin-left: 0;/*не знаю надо ли оно*/
     margin-bottom: 25px;
     max-width: 250px;
@@ -289,64 +294,65 @@ body {
     float: right;
     margin-top: 15px;
 }
-.info-button {
+.store-map {
+    display: block;/*та же ерунда. вынужден сделать кнопку с заданой шириной*/
+    text-decoration: none;
     margin: 25px 0 0 0;
     width: 170px;
     height: 35px;
-    padding: 9px 28px 9px 29px;
+    padding: 9px 0 9px 0;/*если  текста станет больше, он будет выравниваться по центру*/
     background-color: #F13C6E;
     border: 2px solid #fff;
     border-radius: 30px;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
     font-size: 14px;
-    font-weight: 400;
     line-height: 16px;
     letter-spacing: 0.02em;
     color: #fff;
-    cursor: pointer;
 }
-.info-button:hover {
+.store-map:hover {
     background-color: #e788a3;
     border: 2px solid #e788a3;
 }
 .partners {
-    display: inline-block;
-    vertical-align: top;
-    height: 120px;
+    float: left;
+    height: 119px;
     width: 277.5px;
     background-color: #fff;
     border-right: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;;
+    border-bottom: 1px solid #efefef;
 }
 .partner-logo {
-    display: block;/*это свойство использую для того чтобы выровнять содержимое по центру. Но появляется косяк. У меня содержимое это ссылка, при наведении на которую срабатывает курсор-поинтер. Учитывая то что содержимое является блочным елементом, поинтер срабатывает по всей ширине родителя. Как это исправить?*/
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px; 
     max-height: 50px;
     max-width: 180px;/*максимальное допустимое разрешение 180/50, на случай если будет загружен логотип размером больше родителя*/
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
-.mar-bot-80 {
+.partner-box {
     margin-bottom: 80px;
 }
 .block6 {
-    padding: 60px 0 0 0;
+    padding: 56px 0 0 0;
 }
 .footer-menu {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 255px;
-    margin: 0 30px 60px 0;
+    margin: 0 30px 50px 0;
     
 }
-.footer-menu:last-child {
-    margin-right: 0;
+.footer-menu:nth-last-of-type(2) {
+    margin-right: 0;/*применится к предпоследнему */
 }
 .footer-name {
     max-width: 150px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 22px;
     margin-bottom: 30px;
 }
 .footer-line {
@@ -386,9 +392,15 @@ body {
     background-color: #efefef;
 }
 .created-info {
-    color: #828282;
-    font-size: 12px;
-    line-height: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     padding: 25px 0 25px 0;
+}
+.no-style {
+    text-decoration: none;
+    color: #828282;
+    font-size: 12px;
+    line-height: 14px;  
 }
