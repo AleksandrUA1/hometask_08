@@ -83,9 +83,7 @@ body {
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
-    border-color: #f13c6e;
-    border-style: solid;
-    border-width: 2px;
+    border: 2px solid #f13c6e;
     border-radius: 40px;
 }
 .call-button:hover {
@@ -191,7 +189,7 @@ body {
     margin: 38px 30px 0 0;
     height: 363px;
     width: 255px;
-    padding: 25px 30px;
+    padding: 25px 30px 25px 30px;
     background-color: #fff;/*нужен ли тут белый цвет, если он и так по умолчанию белый?*/
     border: 2px solid #fff;/*добавил бордер чтобы содержимое карточки не прыгало при hover*/
 }
@@ -330,4 +328,63 @@ body {
 }
 .mar-bot-80 {
     margin-bottom: 80px;
+}
+.block6 {
+    padding: 60px 0 38px 0;
+}
+.footer-menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 255px;
+    margin-right: 30px;
+    
+}
+.footer-menu:last-child {
+    margin-right: 0;
+}
+.footer-name {
+    max-width: 150px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 30px;
+}
+.footer-line {
+    display: block;
+    background-color: #EFEFEF;
+    height: 1px;
+    margin-bottom: 25px;
+}
+.footer-item {
+    text-decoration: none;
+    color: #828282;
+    font-size: 12px;
+    line-height: 28px;
+}
+.big-line {
+    margin: 60px 0 0 0;   
+}
+.media {
+    display: block;
+    float: left;
+}
+.footer-phone {
+    display: block;
+    float: right;
+}
+.edit-number {
+    margin: 50px 40px 51px 0;
+}
+.edit-button {
+    margin: 40px 0 40px 0
+}
+.footer-media {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 45px;
+    max-height: 45px;
+    margin: 37px 20px 38px 0;
+}
+.footer-media:last-child {
+    margin-right: 0;
 }
