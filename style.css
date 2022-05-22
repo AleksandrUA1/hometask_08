@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -97,8 +98,7 @@ body {
     clear: both;
 }
 .line {
-    background-color: #efefef;
-    height: 1px;
+    border-bottom: 1px solid #efefef;
 }
 .block3 {
     padding: 30px 0 30px 0;
@@ -126,15 +126,12 @@ body {
 .a-item:hover {
     color: #f13c6e;
 }
-.hiden-block {
-    background-color: #f13c6e;
-}
 .block4 {
-    background-image: url(images/Rectangle2.jpg); /*Почему сиреневые скобки? Почему при маштабировании страницы background-image сьезжает вправо?*/
-    width: 1920px;
+    background-image: url(images/Rectangle2.jpg); /*Почему сиреневые скобки?*/
+    background-color: #f57699;
     height: 604px;
-    margin-left: auto;
-    margin-right: auto;
+    background-position: center;
+    background-size: cover;
 }
 .content-box.main-chnges {
     color: #fff;
@@ -253,13 +250,13 @@ body {
     color: #fff;
 }
 .info-cards:nth-child(n+3) {
-    margin: 0 30px 30px 0;/*у всех начиная с 3го справа и снизу отступ 30рх*/
+    margin: 0 30px 30px 0;/*если этих карточек станет больше 5, тогда у всех начиная с 3й карточки справа и снизу будет отступ 30рх*/
 }
 .info-cards:nth-child(2n) {
-    margin-right: 0;/*у каждого второго отступ справа 0*/
+    margin-right: 0;/*у каждой второй отступ справа 0*/
 }
 .info-cards:nth-last-of-type(2) {
-    margin-bottom: 100px;/*у предпоследнего (последний клиарфикс) отступ снизу 100рх*/
+    margin-bottom: 100px;/*у ПРЕДпоследней карточки (последний елемент этого родителя - клиарфикс) отступ снизу 100рх*/
 }
 .info-left-side {
     float: left;
@@ -343,7 +340,6 @@ body {
     float: left;
     width: 255px;
     margin: 0 30px 50px 0;
-    
 }
 .footer-menu:nth-last-of-type(2) {
     margin-right: 0;/*применится к предпоследнему */
@@ -353,9 +349,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 30px;
-}
-.footer-line {
+    padding-bottom: 30px;
     margin-bottom: 25px;
 }
 .footer-item {
@@ -363,6 +357,9 @@ body {
     color: #828282;
     font-size: 12px;
     line-height: 28px;
+}
+.block7 {
+    border-top: 1px solid #efefef;
 }
 .media {
     display: block;
@@ -388,7 +385,7 @@ body {
 .footer-media:last-child {
     margin-right: 0;
 }
-.block7 {
+.block8 {
     background-color: #efefef;
 }
 .created-info {
@@ -396,11 +393,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 25px 0 25px 0;
+    padding: 24px 0 24px 0;
 }
 .no-style {
     text-decoration: none;
     color: #828282;
-    font-size: 12px;
-    line-height: 14px;  
+    font-size: 12px;  
 }
