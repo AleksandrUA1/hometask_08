@@ -25,7 +25,7 @@
         <div class="content-box">
             <div class="left-box">
                 <a href="#"><img class="logo-image" src="images/logo.png" alt="logotip_beauty"></a><!--
-             --><a class="logo" href="index.html">beauty</a><!--Нужно ли содержимое тега "а" заварачивать в "h1" или"р"? Во что вообще лучше заворачивать логотип если он написан текстом?-->
+             --><a class="logo" href="index.html">beauty</a><!--Нужно ли содержимое тега "а" заворачивать в "h1" или"р"? Во что вообще лучше заворачивать логотип если он написан текстом?-->
             </div>
             <div class="right-box">
                 <a class="call-number" href="tel:88121234567">8 (812) 123-45-67</a><!--
@@ -85,38 +85,41 @@
              --><div class="clearfix"></div>
             </div>
             <div>
-                <div class="info-cards">
+                <div class="info-cards info-icon-mail">
                     <form action="#" method="get" name="form1" class="info-left-side">
                         <h5 class="info-name">Получайте бонусы и подарки</h5>
                         <p class="info-content">Каждый месяц разыгрываем <br> 10 000 гривен для наших клиентов</p>
                         <input class="info mail" type="email" name="client-email" placeholder="Введите e-mail">
-                    </form><!--
-                 --><img class="info-image" src="images/mail.png" alt="mail_icon">
+                    </form>
                 </div><!--
-             --><div class="info-cards">
+             --><div class="info-cards info-icon-car">
                     <form action="#" method="get" name="from2" class="info-left-side">
                         <h5 class="info-name">Заходите к нам</h5>
                         <p class="info-content">Более 300 магазинов по всей стране</p>
                         <a class="store-map" href="#">Карта магазинов</a>
-                    </form><!--
-                 --><img class="info-image" src="images/car.png" alt="cas_icon">
+                    </form>
                 </div><!--
              --><div class="clearfix"></div>
             </div>
-            <div class="partner-box">
-                <div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></div><!--
-             --><div class="clearfix"></div>
+            <div class="partner-box"><!--не смог придумать как сделать этот список на ссылках, переделывал раза 3, и пришлось сделать на баттонах. Возникала одна и та же проблема - не придумал как убрать пустую кликабельную область слева и справа от ссылки. 
+            Содержимое карточки должно оставаться по центру родителя.
+            Ховер должен срабатывать только при наведении на тело картинки. 
+            И все это должно работать даже если вместо этой картинки загрузить дуругую с другими размерами-->
+                <ul>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <li class="partners"><button class="partner-logo" form="name2"><img  src="images/impuls.png" alt="partner_logo_icon"></button></li>
+                    <div class="clearfix"></div>
+                </ul>
             </div>
             <h3 class="cards-name">Вы недавно смотрели</h3>
             <div>

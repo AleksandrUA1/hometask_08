@@ -204,14 +204,14 @@ body {
     margin-right: auto;
     width: 125px;
     height: 166px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .card-content {
     line-height: 19px;
     color: #333333;
     text-align: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .card-price {
     font-weight: 500;
@@ -219,7 +219,7 @@ body {
     line-height: 24px;
     letter-spacing: 0,05em;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .cards-button {
     display: block;/*Думал думал, и никак не придумал. А как сделать так, чтобы в случаи если текста в кнопке станет больше, размер кнопки увеличился вместе с текстом (сохраняя падинги), и при этом кнопка остается выровняной по центру родителя?*/
@@ -247,7 +247,16 @@ body {
     margin: 100px 30px 30px 0;
     padding: 35px 45px 35px 40px;
     background-color: #F13C6E;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: 92% center;
     color: #fff;
+}
+.info-icon-mail {
+    background-image: url(images/mail.png); 
+}
+.info-icon-car {
+    background-image: url(images/car.png); 
 }
 .info-cards:nth-child(n+3) {
     margin: 0 30px 30px 0;/*если этих карточек станет больше 5, тогда у всех начиная с 3й карточки справа и снизу будет отступ 30рх*/
@@ -256,7 +265,7 @@ body {
     margin-right: 0;/*у каждой второй отступ справа 0*/
 }
 .info-cards:nth-last-of-type(2) {
-    margin-bottom: 100px;/*у ПРЕДпоследней карточки (последний елемент этого родителя - клиарфикс) отступ снизу 100рх*/
+    margin-bottom: 100px;/*у ПРЕДпоследней карточки отступ снизу 100рх (последний елемент этого родителя - клиарфикс)*/
 }
 .info-left-side {
     float: left;
@@ -283,13 +292,11 @@ body {
     margin-top: 25px;
     padding-left: 25px;
     border-style: none;
+    outline: none;
 }
 .info.mail:focus {
-    color: #000;/*как убрать чорную рамку у поля емеил?*/
-}
-.info-image {
-    float: right;
-    margin-top: 15px;
+    color: #000;
+
 }
 .store-map {
     display: block;/*та же ерунда. вынужден сделать кнопку с заданой шириной*/
@@ -312,18 +319,20 @@ body {
     border: 2px solid #e788a3;
 }
 .partners {
+    display: block;
     float: left;
     height: 119px;
-    width: 277.5px;
+    width: 25%;
     background-color: #fff;
     border-right: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
+    padding-top: 35px;
 }
 .partner-logo {
+    padding: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 35px; 
     max-height: 50px;
     max-width: 180px;/*максимальное допустимое разрешение 180/50, на случай если будет загружен логотип размером больше родителя*/
     background-color: transparent;
